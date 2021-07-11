@@ -1,3 +1,4 @@
+
 -- --------------------------------------------------------
 -- Host:                         192.168.0.2
 -- Server version:               8.0.24 - MySQL Community Server - GPL
@@ -29,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `tbl_gaji` (
   PRIMARY KEY (`gaji_id`),
   KEY `kode_kar` (`kode_kar`),
   CONSTRAINT `FK_tbl_gaji_tbl_karyawan` FOREIGN KEY (`kode_kar`) REFERENCES `tbl_karyawan` (`kode_kar`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 ;
 
 -- Dumping data for table penggajian.tbl_gaji: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_gaji` DISABLE KEYS */;
@@ -50,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `tbl_karyawan` (
   `posisi_kar` char(50) DEFAULT NULL,
   `gajiBersih` double DEFAULT NULL,
   PRIMARY KEY (`kode_kar`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7;
 
 -- Dumping data for table penggajian.tbl_karyawan: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_karyawan` DISABLE KEYS */;
@@ -67,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `password` char(30) DEFAULT NULL,
   `fullname` char(100) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 ;
 
 -- Dumping data for table penggajian.tbl_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
